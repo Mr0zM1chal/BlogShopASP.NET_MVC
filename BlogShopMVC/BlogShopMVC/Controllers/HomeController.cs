@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BlogShopMVC.DAL;
+using SklepBlog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +10,19 @@ namespace BlogShopMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private ShopContext db = new ShopContext();
         public ActionResult Index()
         {
+            Category category = new Category
+            {
+                CategoryName = "T-shirt",
+                CategoryDescription = "tanie koszulki",
+                CategoryId =
+                1,
+                IconFileName = "xyz",
+            };
+            db.Categories.Add(category);
+            db.SaveChanges();
             return View();
         }
 

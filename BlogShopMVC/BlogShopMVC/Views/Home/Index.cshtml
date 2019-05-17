@@ -1,66 +1,53 @@
-﻿
-    @{        
-        ViewBag.Title = "Blog Shop";
-            }
-    
-    <section>
-        <ul class="KursyTrzyKolumny duzaListaKursy">
+﻿@model BlogShopMVC.ViewModels.HomeViewModel
+@using BlogShopMVC.Infrastructure
+@{
+    ViewBag.Title = "Blog Shop";
+}
+<ul>
+    <li>
+        <a href="link" style="background-image: url(../Content/Kategorie/aspnet.png); ">
+            Menu
+        </a>
+    </li>
+
+</ul>
+<br />
+        </nav>
+<section>
+    <ul class="KursyTrzyKolumny duzaListaKursy">
+        @foreach (var category1 in Model.Products2)
+        {
             <li>
                 <article>
                     <a class="dodajDoKoszykaLink" href="link">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <img class="kurs" src="../Content/Kursy/obrazekcss.png" />
+                    <a class="productLink" href="link">
+                        <img class="kurs" src="@Url.IconProductFileName(category1.IconProductFileName)" />
                         <h1>
-                            Opis
+                            @category1.ProductMake , @category1.ProductModel, @category1.ProductPrice
                         </h1>
                     </a>
                 </article>
             </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <img class="kurs" src="../Content/Kursy/obrazekhtml.png" />
-                        <h1>
-                            Opis
-                        </h1>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <img class="kurs" src="../Content/Kursy/obrazekjquery.png" />
-                        <h1>
-                            Opis
-                        </h1>
-                    </a>
+        }
 
-                </article>
-            </li>
-        </ul>
-    </section>
-    <br />
-    <br />
-    <br />
+    </ul>
+</section>
+<br />
+<br />
+<br />
 
 
-    <a class="button1" href="#">Kup teraz</a>
-    <a class="button2" href="#">Więcej</a>
+<a class="button1" href="#">Kup teraz</a>
+<a class="button2" href="#">Więcej</a>
 
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
- 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

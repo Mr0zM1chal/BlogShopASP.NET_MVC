@@ -138,9 +138,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AppConfig.cs" />
+    <Compile Include="Infrastructure\UrlHelpers.cs" />
     <Compile Include="Migrations\201905170128208_InitialCreate.cs" />
     <Compile Include="Migrations\201905170128208_InitialCreate.Designer.cs">
       <DependentUpon>201905170128208_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905171625443_addedProductIconProductFileName.cs" />
+    <Compile Include="Migrations\201905171625443_addedProductIconProductFileName.Designer.cs">
+      <DependentUpon>201905171625443_addedProductIconProductFileName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905171632190_productFile.cs" />
+    <Compile Include="Migrations\201905171632190_productFile.Designer.cs">
+      <DependentUpon>201905171632190_productFile.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
@@ -150,12 +160,25 @@
     <Compile Include="Models\PositionOfTheOrder.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Categories.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\IconProductFileName\album2.png" />
+    <Content Include="Content\IconProductFileName\koszulkab3.png" />
+    <Content Include="Content\IconProductFileName\koszulkac3.png" />
+    <Content Include="Content\IconProductFileName\ksiazka2.png" />
+    <Content Include="Content\IconProductFileName\logo.jpg" />
+    <Content Include="Content\IconProductFileName\logo.png" />
+    <Content Include="Content\IconProductFileName\logo2.png" />
+    <Content Include="Content\IconProductFileName\polo3.png" />
+    <Content Include="Content\IconProductFileName\xyzb2.png" />
+    <Content Include="Content\IconProductFileName\xyzc2.png" />
+    <Content Include="Content\IconProductFileName\xyzs2.png" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\ajax-loader.png" />
     <Content Include="Content\Images\baner.png" />
@@ -253,6 +276,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905170128208_InitialCreate.resx">
       <DependentUpon>201905170128208_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905171625443_addedProductIconProductFileName.resx">
+      <DependentUpon>201905171625443_addedProductIconProductFileName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905171632190_productFile.resx">
+      <DependentUpon>201905171632190_productFile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

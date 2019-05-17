@@ -14,6 +14,7 @@ namespace SklepBlog.Models
         public string ProductMake { get; set; }
         public string ProductModel { get; set; }
         public double ProductPrice { get; set; }
+        public string IconProductFileName { get; set; }
         public int CategoryId { get; set; }
     }
 }

@@ -4,18 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using SklepBlog.Models;
+using BlogShopMVC.Migrations;
+using System.Data.Entity.Migrations;
 
 namespace BlogShopMVC.DAL
 {
-    public class ShopInitializer : DropCreateDatabaseAlways<ShopContext>
+    public class ShopInitializer : MigrateDatabaseToLatestVersion<ShopContext, Configuration>
     {
-        protected override void Seed(ShopContext context)
-        {
-            SeedKursyData(context);
-            base.Seed(context);
-        }
-
-        private void SeedKursyData(ShopContext context)
+        public static void SeedShopData(ShopContext context)
         {
             var categories = new List<Category>
             {
@@ -24,8 +20,9 @@ namespace BlogShopMVC.DAL
                 new Category (){ CategoryDescription = "Płyty winyle + blueray", CategoryId = 4, CategoryName = "Płyty", IconFileName = "xyz", },
                 new Category (){ CategoryDescription = "Ksiżąki, gazety", CategoryId = 5, CategoryName = "Książki", IconFileName = "xyz", }
             };
-            categories.ForEach(k => context.Categories.Add(k));
+            categories.ForEach(k => context.Categories.AddOrUpdate(k));
             context.SaveChanges();
+
             var products = new List<Product>
             {
                 new Product(){ CategoryId = 2, ProductId = 2, ProductMake = "Bloger", ProductModel = "Kubek Szary", ProductPrice = 12.99},
@@ -40,7 +37,7 @@ namespace BlogShopMVC.DAL
                 new Product(){ CategoryId = 2, ProductId = 11, ProductMake = "Bloger", ProductModel = "Przygody blogera", ProductPrice = 22.99},
                 new Product(){ CategoryId = 2, ProductId = 12, ProductMake = "Bloger", ProductModel = "Album", ProductPrice = 52.99},
             };
-            products.ForEach(p => context.Products.Add(p));
+            products.ForEach(p => context.Products.AddOrUpdate(p));
             context.SaveChanges();
         }
     }

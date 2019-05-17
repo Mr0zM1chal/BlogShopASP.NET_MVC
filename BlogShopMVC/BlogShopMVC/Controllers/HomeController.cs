@@ -13,16 +13,8 @@ namespace BlogShopMVC.Controllers
         private ShopContext db = new ShopContext();
         public ActionResult Index()
         {
-            Category category = new Category
-            {
-                CategoryName = "T-shirt",
-                CategoryDescription = "tanie koszulki",
-                CategoryId =
-                1,
-                IconFileName = "xyz",
-            };
-            db.Categories.Add(category);
-            db.SaveChanges();
+
+            var listCategory = db.Categories.ToList();
             return View();
         }
 

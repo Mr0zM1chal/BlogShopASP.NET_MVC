@@ -15,7 +15,7 @@ namespace BlogShopMVC.Controllers
         public ActionResult Index()
         {
 
-            var listCategory = db.Categories.ToList();
+            var listCategory = db.Categories.ToList().Take(4);
             var listProduct2 = db.Products.Where(a => a.CategoryId == 2).Take(3).ToList();
             var listProduct3 = db.Products.Where(a => a.CategoryId == 3).Take(3).ToList();
 

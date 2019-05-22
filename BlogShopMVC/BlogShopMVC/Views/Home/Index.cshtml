@@ -1,18 +1,29 @@
 ﻿@model BlogShopMVC.ViewModels.HomeViewModel
+
 @using BlogShopMVC.Infrastructure
 @{
     ViewBag.Title = "Blog Shop";
 }
-<ul>
-    <li>
-        <a href="link" style="background-image: url(../Content/Kategorie/aspnet.png); ">
-            Menu
-        </a>
-    </li>
+<section>
+    <ul>
+        @foreach (var category in Model.Categories)
+        {
+            <li>
+    
+                <a href="@Url.Action("List", "Categories", new { categoryName = category.CategoryName})">
+                    @category.CategoryName
+                </a>
+            </li>
 
-</ul>
+        }
+
+    </ul>
+
+</section>
+
+  
 <br />
-        </nav>
+    
 <section>
     <ul class="KursyTrzyKolumny duzaListaKursy">
         @foreach (var category1 in Model.Products2)

@@ -10,10 +10,10 @@ namespace BlogShopMVC.Infrastructure
     public static class UrlHelpers
     {
 
-        public static string ProductPicturesAddres( this UrlHelper helper, string categoryName )
+        public static string CategoryPicturesAddres( this UrlHelper helper, string categoryName )
         {
-            var ProductPicturesFolder = AppConfig.PicturesCategory;
-            var addres = Path.Combine(ProductPicturesFolder, categoryName);
+            var CategoryPicturesFolder = AppConfig.PicturesCategory;
+            var addres = Path.Combine(CategoryPicturesFolder, categoryName);
             var addresRelative = helper.Content(addres);
 
                 return addresRelative;

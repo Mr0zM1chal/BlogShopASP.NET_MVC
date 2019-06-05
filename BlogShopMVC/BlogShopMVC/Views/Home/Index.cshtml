@@ -4,7 +4,7 @@
 @{
     ViewBag.Title = "Blog Shop";
 }
-@*<section>
+<nav class="KategorieVertical">
     <ul>
         @foreach (var category in Model.Categories)
         {
@@ -19,7 +19,7 @@
 
     </ul>
 
-</section>*@
+</nav>
 
   
 <br />
@@ -30,11 +30,11 @@
         {
             <li>
                 <article>
-                    <a class="dodajDoKoszykaLink" href="link">
+                    <a class="addToCartLink" href="@Url.Action("AddToCart", "Cart", new { id = category1.ProductId})">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
                     <a class="productLink" href="link">
-                        <img class="kurs" src="@Url.IconProductFileName(category1.IconProductFileName)" />
+                        <img src="" />
                         <h1>
                             @category1.ProductMake , @category1.ProductModel, @category1.ProductPrice
                         </h1>

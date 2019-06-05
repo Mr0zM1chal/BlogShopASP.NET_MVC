@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="DAL\ShopInitializer.cs" />
     <Compile Include="DAL\ShopContext.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
@@ -151,17 +152,9 @@
     </Compile>
     <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\UrlHelpers.cs" />
-    <Compile Include="Migrations\201905170128208_InitialCreate.cs" />
-    <Compile Include="Migrations\201905170128208_InitialCreate.Designer.cs">
-      <DependentUpon>201905170128208_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905171625443_addedProductIconProductFileName.cs" />
-    <Compile Include="Migrations\201905171625443_addedProductIconProductFileName.Designer.cs">
-      <DependentUpon>201905171625443_addedProductIconProductFileName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905171632190_productFile.cs" />
-    <Compile Include="Migrations\201905171632190_productFile.Designer.cs">
-      <DependentUpon>201905171632190_productFile.cs</DependentUpon>
+    <Compile Include="Migrations\201906041303167_Initial Create.cs" />
+    <Compile Include="Migrations\201906041303167_Initial Create.Designer.cs">
+      <DependentUpon>201906041303167_Initial Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
@@ -229,7 +222,12 @@
     <Content Include="Content\Kursy\obrazekxml.png" />
     <Content Include="Content\PicturesCategory\xyz2.png" />
     <Content Include="Content\PicturesCategory\xyz3.png" />
+    <Content Include="Content\PicturesCategory\xyz5.png" />
     <Content Include="Content\PicturesCategory\xyz4.png" />
+    <Content Include="Content\PicturesProducts\xyz2.png" />
+    <Content Include="Content\PicturesProducts\xyz3.png" />
+    <Content Include="Content\PicturesProducts\xyz4.png" />
+    <Content Include="Content\PicturesProducts\xyz5.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -251,15 +249,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -272,10 +261,20 @@
     <Content Include="Views\Home\Pomoc.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Categories\List.cshtml" />
+    <Content Include="Views\Categories\_CategoriesMenu.cshtml" />
+    <Content Include="Views\Categories\_ProductsList.cshtml" />
     <None Include="Views\Home\View.cshtml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Koszyk\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -291,14 +290,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905170128208_InitialCreate.resx">
-      <DependentUpon>201905170128208_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905171625443_addedProductIconProductFileName.resx">
-      <DependentUpon>201905171625443_addedProductIconProductFileName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905171632190_productFile.resx">
-      <DependentUpon>201905171632190_productFile.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906041303167_Initial Create.resx">
+      <DependentUpon>201906041303167_Initial Create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

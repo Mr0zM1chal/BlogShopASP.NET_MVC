@@ -18,7 +18,8 @@ namespace BlogShopMVC.DAL
                 new Category (){ CategoryDescription = "Kubki, smycze, wlepy", CategoryId = 1, CategoryName = "Akcesoria", IconFileName = "xyz2", },
                 new Category (){ CategoryDescription = "Koszulki, koszulki polo", CategoryId = 2, CategoryName = "Koszulki", IconFileName = "xyz3", },
                 new Category (){ CategoryDescription = "Płyty winyle + blueray", CategoryId = 3, CategoryName = "Płyty", IconFileName = "xyz4", },
-                new Category (){ CategoryDescription = "Ksiżąki, gazety", CategoryId = 4, CategoryName = "Książki", IconFileName = "xyz2", }
+                new Category (){ CategoryDescription = "Ksiżąki, gazety", CategoryId = 4, CategoryName = "Książki", IconFileName = "xyz2", },
+                new Category (){ CategoryDescription = "Upominki", CategoryId = 5, CategoryName = "Upominki", IconFileName = "xyz2",}
             };
             categories.ForEach(k => context.Categories.AddOrUpdate(k));
             context.SaveChanges();

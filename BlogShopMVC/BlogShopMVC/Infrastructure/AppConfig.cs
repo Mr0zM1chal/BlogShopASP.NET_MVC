@@ -17,15 +17,15 @@ namespace BlogShopMVC.Infrastructure
                 return _picturesProducts;
             } 
         }
-        private static string _picturesCategory = ConfigurationManager.AppSettings["PicturesCategory"];
+        //private static string _picturesCategory = ConfigurationManager.AppSettings["PicturesCategory"];
 
-        public static string PicturesCategory
-        {
-            get
-            {
-                return _picturesCategory;
-            }
-        }
+        //public static string PicturesCategory
+        //{
+        //    get
+        //    {
+        //        return _picturesCategory;
+        //    }
+        //}
 
     }
 }

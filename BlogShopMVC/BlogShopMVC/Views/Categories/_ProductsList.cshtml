@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SklepBlog.Models.Product>
+@using BlogShopMVC.Infrastructure
+
+<section>
+    <ul class="KursyTrzyKolumny duzaListaKursy">
+        @foreach (var product in Model)
+        {
+            <li>
+                <article>
+                    <a class="addToCartLink" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductId})">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="productLink" href="@Url.Action("Details", "Categories", new {id = product.ProductId})">
+                        <img src="" />
+                        <h1>
+                            @product.ProductMake , @product.ProductModel, @product.ProductPrice
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        }
+
+    </ul>
+</section>

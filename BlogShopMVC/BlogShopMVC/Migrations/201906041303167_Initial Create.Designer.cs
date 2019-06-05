@@ -13,7 +13,7 @@ namespace BlogShopMVC.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201905170128208_InitialCreate"; }
+            get { return "201906041303167_Initial Create"; }
         }
         
         string IMigrationMetadata.Source

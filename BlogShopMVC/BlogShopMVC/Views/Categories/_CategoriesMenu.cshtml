@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SklepBlog.Models.Category>
+
+
+<nav class="KategorieVertical">
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li>
+
+                <a href="@Url.Action("List", "Categories", new { categoryName = category.CategoryName})">
+                    @category.CategoryName
+                </a>
+            </li>
+
+        }
+
+    </ul>
+
+</nav>

@@ -10,20 +10,20 @@ namespace BlogShopMVC.Infrastructure
     public static class UrlHelpers
     {
 
-        public static string CategoryPicturesAddres( this UrlHelper helper, string categoryName )
-        {
-            var CategoryPicturesFolder = AppConfig.PicturesCategory;
-            var addres = Path.Combine(CategoryPicturesFolder, categoryName);
-            var addresRelative = helper.Content(addres);
+        //public static string CategoryPicturesAddres( this UrlHelper helper, string categoryName )
+        //{
+        //    var CategoryPicturesFolder = AppConfig.PicturesCategory;
+        //    var addres = Path.Combine(CategoryPicturesFolder, categoryName);
+        //    var addresRelative = helper.Content(addres);
 
-                return addresRelative;
-        }
+        //        return addresRelative;
+        //}
 
         public static string IconProductFileName(this UrlHelper helper, string productFileName)
         {
-            var ProductPicturesFolder = AppConfig.PicturesProducts;
-            var addres = Path.Combine(ProductPicturesFolder, productFileName);
-            var addresRelative = helper.Content(addres);
+           var ProductPicturesFolder = AppConfig.PicturesProducts;
+           var addres = Path.Combine(ProductPicturesFolder, productFileName);
+           var addresRelative = helper.Content(addres);
 
             return addresRelative;
         }

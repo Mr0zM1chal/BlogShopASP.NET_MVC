@@ -39,6 +39,7 @@
                         ProductMake = c.String(nullable: false, maxLength: 100),
                         ProductModel = c.String(),
                         ProductPrice = c.Double(nullable: false),
+                        IconProductFileName = c.String(),
                         CategoryId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ProductId)

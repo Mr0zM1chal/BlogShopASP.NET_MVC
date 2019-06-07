@@ -18,12 +18,14 @@ namespace BlogShopMVC.Controllers
         public ActionResult List(string categoryName)
         {
             var category = db.Categories.Include("Products").Where(c => c.CategoryName.ToUpper() == categoryName.ToUpper()).Single();
-            var products = db.Products.Where(p => p.CategoryId == category.CategoryId).ToList();
+           // var products = db.Products.Where(p => p.CategoryId == category.CategoryId).ToList();
+           var products = category.Products.ToList();
             return View(products);
         }
         public ActionResult Details(int id)
         {
-            return View();
+            var product = db.Products.Find(id);
+            return View(product);
         }
         [ChildActionOnly]
         public ActionResult CategoriesMenu()

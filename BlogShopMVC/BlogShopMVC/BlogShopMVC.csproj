@@ -236,6 +236,12 @@
     <Content Include="Prototype\Koszyk.html" />
     <Content Include="Prototype\Logowanie.html" />
     <Content Include="Prototype\Properties\PublishProfiles\Deploy.pubxml.user" />
+    <Content Include="Prototype\prototype\Dodaj.html" />
+    <Content Include="Prototype\prototype\DodajPrzedmiot.html" />
+    <Content Include="Prototype\prototype\Index.html" />
+    <Content Include="Prototype\prototype\Kategorie.html" />
+    <Content Include="Prototype\prototype\Koszyk.html" />
+    <Content Include="Prototype\prototype\Kurs.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -263,6 +269,7 @@
     <Content Include="Views\Categories\List.cshtml" />
     <Content Include="Views\Categories\_CategoriesMenu.cshtml" />
     <Content Include="Views\Categories\_ProductsList.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
     <None Include="Views\Home\View.cshtml" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">

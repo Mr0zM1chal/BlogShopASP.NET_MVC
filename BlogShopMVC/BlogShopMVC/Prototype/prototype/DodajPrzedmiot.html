@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+	<link href="../Content/cze.css" rel="stylesheet"/>
+	
+		<script>
+			  var loadFile = function(event) {
+				var output = document.getElementById('output');
+				output.src = URL.createObjectURL(event.target.files[0]);
+			  };
+			</script>
+</head>
+<body>
+<div>
+    <header>
+        <div style="overflow: hidden;">
+            <a id="koszykHeaderLink" href="link">
+                Koszyk (0)
+                <span></span>
+            </a>
+
+            <br/>
+            <br/>
+            <br/>
+
+
+            <div style='float:right'>
+                <a id="indexHeaderLogo" href="link">
+                    <img src="../Content/Images/logo.png" class="bottom-right"/>
+                </a>
+            </div>
+
+            <div style='float:left'>
+                <a id="index2HeaderLogo" href="link">
+                    <img src="../Content/Images/logo2.png" class="bottom-left"/>
+                </a>
+            </div>
+        </div>
+
+    </header>
+	
+			<nav>
+				  <ul>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#sklep">Sklep</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#wyloguj">Wyloguj</a></li>
+				  </ul>
+				</nav>
+    
+		<!--- SEKCJE --->
+		</br>
+		<h2>Dodaj artykuł</h2>
+		</br>
+
+			<div class="row">
+			
+			  <div class="column" style="background-color:#ffffff;">
+									<div class="container">
+					  <form action="/action_page.php">
+						<label for="nazwa">Nazwa produktu</label>
+						<input type="text" id="nazwa" name="firstname" placeholder="Podaj nazwę...">
+
+						<label for="rodzaj">Rodzaj</label>
+						<input type="text" id="rodzaj" name="lastname" placeholder="Podaj rodzaj...">
+
+						<label for="cena">Cena</label></br>
+						<input type="number" id="cena" name="lastname" min="1" max="999999999999" placeholder="Podaj cenę...">
+						</br>
+						</br>
+
+						<label for="subject">Opis</label>
+						<textarea id="subject" name="subject" placeholder="Treść..." style="height:200px"></textarea>
+
+						<input type="submit" value="Dodaj">
+					  </form>
+					</div>
+
+			  </div>
+			  
+			  <div class="column" style="background-color:#ffffff;">
+				<input type="file" accept="image/*" onchange="loadFile(event)">
+					<img id="output"/>
+			  </div>
+			</div>
+		
+		
+		<!--- DONE --->
+		
+	
+	
+
+	
+</body>
+</html>

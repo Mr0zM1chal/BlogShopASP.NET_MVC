@@ -1,0 +1,42 @@
+﻿@model SklepBlog.Models.Product
+@using BlogShopMVC.Infrastructure
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ListaKategoriZawartosc">
+    
+    <div id="KategorieListPrawaSekcja">
+        @Html.Action("CategoriesMenu")
+        <div id="Breadcrumb">
+            <img src="../Content/Images/dommaly.png"/>
+            <a href="link">
+                Start > ASP.NET
+            </a>
+        </div>
+        <section id="SekcjaKurs">
+            <div id="KursLewa">
+                <img src="@*@Url.IconProductFileName(Model.IconProductFileName)*@"/>
+            </div>
+            <div id="KursPrawa">
+                <div id="KursNazwa">
+                    <h1>
+                        @Model.ProductModel
+                    </h1>
+                    <h2>
+                        @Model.ProductMake
+                    </h2>
+                </div>
+                <div id="KursCena">
+                    <div>
+                        @Model.ProductPrice<span>PLN</span>
+                    </div>
+                    <a href="@Url.Action("AddToCart", "Cart", new {id = Model.ProductId})"></a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+

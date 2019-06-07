@@ -15,7 +15,7 @@ namespace BlogShopMVC
 
             routes.MapRoute(
                  name: "StronyStatyczne",
-                 url: "strony/{nazwa}.cshtml",
+                 url: "strony/{nazwa}",
                  defaults:
                  new { controller = "Home", action = "StronyStatyczne" });
 

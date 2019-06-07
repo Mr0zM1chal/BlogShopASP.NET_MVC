@@ -1,0 +1,32 @@
+﻿@model SklepBlog.Models.Article
+
+@{
+    ViewBag.Title = "IndexBlog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="KategorieListPrawaSekcja">
+    <section id="SekcjaKurs">
+        <div id="KursLewa">
+            <img src="../Content/Kursy/obrazekmvc.png" />
+        </div>
+        <div id="KursPrawa">
+            <div id="KursNazwa">
+                <h1>
+                    @Model.ArticleTitle
+                </h1>
+                <h2>
+                    @Model.NameOfImageArticle
+                </h2>
+            </div>
+            <div id="KursOpis">
+                @Model.ArticleContent
+            </div>
+            <div id="KursInfo">
+                @Model.ArticleShortcut
+            </div>
+
+        </div>
+    </section>
+</div>
+

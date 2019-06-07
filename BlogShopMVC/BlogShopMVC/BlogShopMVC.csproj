@@ -141,6 +141,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Models\PositionOfTheOrder.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BlogViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +244,7 @@
     <Content Include="Prototype\prototype\Kategorie.html" />
     <Content Include="Prototype\prototype\Koszyk.html" />
     <Content Include="Prototype\prototype\Kurs.html" />
+    <Content Include="Prototype\prototype\michał.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -270,6 +273,8 @@
     <Content Include="Views\Categories\_CategoriesMenu.cshtml" />
     <Content Include="Views\Categories\_ProductsList.cshtml" />
     <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Blog\IndexBlog.cshtml" />
+    <Content Include="Views\Blog\ArticleDetails.cshtml" />
     <None Include="Views\Home\View.cshtml" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">

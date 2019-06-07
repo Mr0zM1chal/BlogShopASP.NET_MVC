@@ -43,6 +43,33 @@ namespace BlogShopMVC.DAL
             };
             products.ForEach(p => context.Products.AddOrUpdate(p));
             context.SaveChanges();
+
+            var articles = new List<Article>
+            {
+                new Article()
+                {
+                    ArticleId = 1, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                    ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                },
+                new Article()
+                {
+                ArticleId = 2, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                },
+                new Article()
+                {
+                ArticleId = 3, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                },
+                new Article()
+                {
+                    ArticleId = 4, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                    ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                },
+
+            };
+            articles.ForEach(a => context.Articles.AddOrUpdate(a));
+            context.SaveChanges();
         }
     }
 }

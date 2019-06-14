@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "_RightSectionLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ListaKategoriZawartosc">
+    @Html.Action("CategoriesMenu", "Categories")
+
+    <div id="KategorieListPrawaSekcja">
+        <section class="SekcjaKoszyk">
+            <div class="SekcjaHeader" style="margin-bottom: 0px;">
+                <h1>
+                    @RenderSection("SectionTitle", required: false)
+                </h1>
+            </div>
+            @RenderBody()
+        </section>
+    </div>
+</div>
+
+@section Scripts
+{
+    @RenderSection("Scripts", required: false)
+}
+© 2019 Michal, Inc.
+

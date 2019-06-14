@@ -1,14 +1,15 @@
-﻿@model SklepBlog.Models.Article
+﻿@using SklepBlog.Models
+@model SklepBlog.Models.Article
 
 @{
-    ViewBag.Title = "IndexBlog";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "DetalisArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";;
 }
 
 <div id="KategorieListPrawaSekcja">
     <section id="SekcjaKurs">
         <div id="KursLewa">
-            <img src="../Content/Kursy/obrazekmvc.png" />
+            <img src="~/Content/PicturesProducts/@Model.NameOfImageArticle" />
         </div>
         <div id="KursPrawa">
             <div id="KursNazwa">

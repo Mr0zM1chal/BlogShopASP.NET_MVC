@@ -8,6 +8,7 @@ namespace SklepBlog.Models
 {
     public class Order
     {
+        public int UserId { get; set; }
         public int OrderId { get; set; }
         [Required(ErrorMessage = "Press first name")]
         [StringLength(30)]

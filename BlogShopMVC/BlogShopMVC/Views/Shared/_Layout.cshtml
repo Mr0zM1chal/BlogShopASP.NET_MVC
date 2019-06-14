@@ -7,8 +7,8 @@
 <div>
     <header>
         <div style="overflow: hidden;">
-            <a id="koszykHeaderLink" href="link">
-                Koszyk (0)
+            <a id="koszykHeaderLink" href="">
+                Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("GetQuantityOFcart", "Cart")</span>)
                 <span></span>
             </a>
             <br />
@@ -72,5 +72,4 @@
     </footer>
     @RenderSection("Scripts", required : false)
 </div>
-</body>
 </html>

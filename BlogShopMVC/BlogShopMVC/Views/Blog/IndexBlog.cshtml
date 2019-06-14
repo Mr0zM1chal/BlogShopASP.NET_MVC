@@ -7,33 +7,29 @@
 <div>
     @foreach (var article in Model.articles)
     {
-        <section>
-            <img src="" alt="obrazek" border="0" align="left">
+    <section>
+        <img src="~/Content/PicturesProducts/@article.NameOfImageArticle" alt="obrazek" border="0" align="left">
 
+        <div>
+            <p align="right">
+                <b>@article.ArticleTitle</b>
+                <br />
+                @article.ArticleShortcut
+                <br /><br />
+            </p>
 
-            <div>
-                <p align="right">
-                    <b>@article.ArticleTitle</b>
-                    <br />
-                    @article.ArticleShortcut
-                    <br /><br />
+        </div>
 
-                </p>
-
-                <h1>
-
-                    <p> @article.NameOfImageArticle</p>
-
-                </h1>
-
-            </div>
-
-
-            <a class="button3" href="@Url.Action("ArticleDetails", "Blog", new { id = article.ArticleId})">Więcej</a>
-
-
-            <br />
-        </section>
+        <a class="button3" href="@Url.Action("ArticleDetails", "Blog", new { id = article.ArticleId})">Więcej</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </section>
 
     }
 </div>

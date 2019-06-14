@@ -1,5 +1,6 @@
 ﻿@model BlogShopMVC.ViewModels.HomeViewModel
 
+@using System.Web.UI.WebControls
 @using BlogShopMVC.Infrastructure
 @{
     ViewBag.Title = "Blog Shop";
@@ -33,10 +34,11 @@
                     <a class="addToCartLink" href="@Url.Action("AddToCart", "Cart", new { id = category1.ProductId})">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
+                    
                     <a class="productLink" href="@Url.Action("Details", "Categories", new {id = category1.ProductId})">
-                        <img src="" />
+                        <img src="~/Content/PicturesProducts/@category1.IconProductFileName"  />
                         <h1>
-                            @category1.ProductMake , @category1.ProductModel, @category1.ProductPrice
+                            @category1.ProductMake , @category1.ProductModel, @category1.ProductPrice, @category1.IconProductFileName
                         </h1>
                     </a>
                 </article>

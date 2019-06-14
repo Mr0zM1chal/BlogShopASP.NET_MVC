@@ -19,7 +19,7 @@ namespace BlogShopMVC.Infrastructure
         //        return addresRelative;
         //}
 
-        public static string IconProductFileName(this UrlHelper helper, string productFileName)
+        public static string PicturesProducts(this UrlHelper helper, string productFileName)
         {
            var ProductPicturesFolder = AppConfig.PicturesProducts;
            var addres = Path.Combine(ProductPicturesFolder, productFileName);
@@ -27,5 +27,22 @@ namespace BlogShopMVC.Infrastructure
 
             return addresRelative;
         }
+        public static string ObrazkiSciezka(this UrlHelper helper, string nazwaObrazka)
+        {
+            
+            try
+            {
+                var ObrazkiFolder = AppConfig.ObrazkiFolderWzgledny;
+                var sciezka = Path.Combine(ObrazkiFolder, nazwaObrazka);
+                var sciezkaBezwgledna = helper.Content(sciezka);
+                return sciezkaBezwgledna;
+
+            }
+            catch (ArgumentNullException e)
+            {
+                return "~/Content/PicturesProducts/xyz3.png";
+            }
+        }
+
     }
 }

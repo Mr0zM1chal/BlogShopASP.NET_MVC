@@ -17,6 +17,19 @@ namespace BlogShopMVC.Infrastructure
                 return _picturesProducts;
             } 
         }
+
+        private static string _obrazkiFolderWzgledny = ConfigurationManager.AppSettings["ObrazkiFolder"];
+
+        public static string ObrazkiFolderWzgledny
+        {
+            get
+            {
+                return _obrazkiFolderWzgledny;
+            }
+        }
+
+
+
         //private static string _picturesCategory = ConfigurationManager.AppSettings["PicturesCategory"];
 
         //public static string PicturesCategory

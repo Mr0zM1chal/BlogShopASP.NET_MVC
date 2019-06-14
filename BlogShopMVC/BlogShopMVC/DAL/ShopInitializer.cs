@@ -26,19 +26,19 @@ namespace BlogShopMVC.DAL
 
             var products = new List<Product>
             {
-                new Product(){ CategoryId = 1, ProductId = 1, ProductMake = "Bloger", ProductModel = "Kubek niebieski", ProductPrice = 4.99, IconProductFileName = "xyz2.png"},
-                new Product(){ CategoryId = 1, ProductId = 2, ProductMake = "Bloger", ProductModel = "Kubek Szary", ProductPrice = 12.99, IconProductFileName = "xyz2.png"},
-                new Product(){ CategoryId = 1, ProductId = 3, ProductMake = "Bloger", ProductModel = "Kubek Biały", ProductPrice = 12.99, IconProductFileName = "xyz2.png"},
-                new Product(){ CategoryId = 1, ProductId = 4, ProductMake = "Bloger", ProductModel = "Kubek Czarny", ProductPrice = 8.99, IconProductFileName = "xyz2.png"},
-                new Product(){ CategoryId = 2, ProductId = 5, ProductMake = "Bloger", ProductModel = "Koszulka biała", ProductPrice = 44.99, IconProductFileName = "xyz3.png"},
-                new Product(){ CategoryId = 2, ProductId = 6, ProductMake = "Bloger", ProductModel = "Koszulka czarna", ProductPrice = 39.99, IconProductFileName = "xyz3.png"},
+                new Product(){ CategoryId = 1, ProductId = 1, ProductMake = "Bloger", ProductModel = "Kubek niebieski", ProductPrice = (decimal) 4.99, IconProductFileName = "xyz2.png"},
+                new Product(){ CategoryId = 1, ProductId = 2, ProductMake = "Bloger", ProductModel = "Kubek Szary", ProductPrice = (decimal) 12.99, IconProductFileName = "xyz2.png"},
+                new Product(){ CategoryId = 1, ProductId = 3, ProductMake = "Bloger", ProductModel = "Kubek Biały", ProductPrice = (decimal) 12.99, IconProductFileName = "xyz2.png"},
+                new Product(){ CategoryId = 1, ProductId = 4, ProductMake = "Bloger", ProductModel = "Kubek Czarny", ProductPrice = (decimal) 8.99, IconProductFileName = "xyz2.png"},
+                new Product(){ CategoryId = 2, ProductId = 5, ProductMake = "Bloger", ProductModel = "Koszulka biała", ProductPrice = (decimal) 44.99, IconProductFileName = "xyz3.png"},
+                new Product(){ CategoryId = 2, ProductId = 6, ProductMake = "Bloger", ProductModel = "Koszulka czarna", ProductPrice = (decimal) 39.99, IconProductFileName = "xyz3.png"},
                 new Product(){ CategoryId = 2, ProductId = 7, ProductMake = "Bloger", ProductModel = "Koszulka Polo", ProductPrice = 77, IconProductFileName = "xyz3.png"},
-                new Product(){ CategoryId = 3, ProductId = 8, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2019", ProductPrice = 0.99, IconProductFileName = "xyz4.png"},
-                new Product(){ CategoryId = 3, ProductId = 9, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2018", ProductPrice = 2.09, IconProductFileName = "xyz4.png"},
-                new Product(){ CategoryId = 4, ProductId = 10, ProductMake = "Bloger", ProductModel = "Poradnik", ProductPrice = 2.99, IconProductFileName = "xyz5.png"},
-                new Product(){ CategoryId = 5, ProductId = 11, ProductMake = "Bloger", ProductModel = "Przygody blogera", ProductPrice = 22.99, IconProductFileName = "xyz5.png"},
-                new Product(){ CategoryId = 5, ProductId = 12, ProductMake = "Bloger", ProductModel = "Album", ProductPrice = 52.99, IconProductFileName = "xyz5.png"},
-                new Product(){ CategoryId = 5, ProductId = 13, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2017", ProductPrice = 5.25, IconProductFileName = "xyz4.png"},
+                new Product(){ CategoryId = 3, ProductId = 8, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2019", ProductPrice = (decimal) 0.99, IconProductFileName = "xyz4.png"},
+                new Product(){ CategoryId = 3, ProductId = 9, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2018", ProductPrice = (decimal) 2.09, IconProductFileName = "xyz4.png"},
+                new Product(){ CategoryId = 4, ProductId = 10, ProductMake = "Bloger", ProductModel = "Poradnik", ProductPrice = (decimal) 2.99, IconProductFileName = "xyz5.png"},
+                new Product(){ CategoryId = 5, ProductId = 11, ProductMake = "Bloger", ProductModel = "Przygody blogera", ProductPrice = (decimal) 22.99, IconProductFileName = "xyz5.png"},
+                new Product(){ CategoryId = 5, ProductId = 12, ProductMake = "Bloger", ProductModel = "Album", ProductPrice = (decimal) 52.99, IconProductFileName = "xyz5.png"},
+                new Product(){ CategoryId = 5, ProductId = 13, ProductMake = "Bloger", ProductModel = "Płyta z blogami 2017", ProductPrice = (decimal) 5.25, IconProductFileName = "xyz4.png"},
 
             };
             products.ForEach(p => context.Products.AddOrUpdate(p));

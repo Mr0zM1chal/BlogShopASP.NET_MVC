@@ -1,0 +1,61 @@
+﻿@model BlogShopMVC.ViewModels.CartViewModel
+@using BlogShopMVC.Infrastructure
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<
+
+<div>
+    <div>
+        @Html.Action("CategoriesMenu", "Categories")
+    </div>
+    <section class="SekcjaKoszyk">
+        <div class="SekcjaHeader" style="margin-bottom: 0px;">
+            <h1>Twój koszyk</h1>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <table id="koszykTabela">
+            @foreach (var possition in Model.PossitionsOfCart)
+            {
+                <tr id="koszyk-wiersz-@possition.product.ProductId">
+                    <td><a href="@Url.Action("Details", "Categories", new {possition = possition.product.ProductId})"><img src="~/Content/PicturesProducts/@possition.product.IconProductFileName"/></a></td>
+                    <td><a href="@Url.Action("Details", "Categories", new {possition = possition.product.ProductId})">@possition.product.ProductMake , @possition.product.ProductModel</a></td>
+                    <td><span id="koszyk-ilosc-pozycji-@possition.product.ProductId">@possition.quantity</span></td>
+                    <td>@possition.price</td>
+                    <td><a class="deleteProduct" data-id="@possition.product.ProductId" href="">Usuń</a></td>
+                </tr>
+                <br/>
+                <br/>
+                <br/>
+            }
+        </table>
+        <br/>
+        <br/>
+        <br/>
+        <div id="CenaCalkowita" style="">
+            Razem: <span id="CenaCalkowita"> @Model.AllPrice</span>
+        </div>
+
+        <div class="SekcjaPrzyciski">
+            <a class="PrzyciskLink" href="link">Kontynułuj zakupy</a>
+            @if (@Model.AllPrice > 0)
+            {
+                <a class="PrzyciskLink" href="@Url.Action("Zaplac", "Cart")">Zapłać</a>
+            }
+
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </section>
+</div>
+
+}

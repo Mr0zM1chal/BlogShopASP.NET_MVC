@@ -40,6 +40,7 @@ namespace BlogShopMVC.Infrastructure
             }
             catch (ArgumentNullException e)
             {
+                e = new ArgumentNullException();
                 return "~/Content/PicturesProducts/xyz3.png";
             }
         }

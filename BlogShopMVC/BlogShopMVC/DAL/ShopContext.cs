@@ -5,10 +5,11 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlogShopMVC.DAL
 {
-    public class ShopContext : DbContext
+    public class ShopContext : IdentityDbContext
     {
         public ShopContext() : base("ShopContext")
         {
@@ -17,6 +18,10 @@ namespace BlogShopMVC.DAL
         static ShopContext()
         {
             Database.SetInitializer<ShopContext>(new ShopInitializer());
+        }
+        public static ShopContext Create()
+        {
+            return new ShopContext();
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }

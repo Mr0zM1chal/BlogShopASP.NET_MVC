@@ -1,4 +1,5 @@
 ﻿using BlogShopMVC.DAL;
+using BlogShopMVC.Infrastructure;
 using BlogShopMVC.ViewModels;
 using SklepBlog.Models;
 using System;
@@ -15,10 +16,44 @@ namespace BlogShopMVC.Controllers
         public ActionResult Index()
         {
 
-            var listCategory = db.Categories.ToList().Take(4);
-            var listProduct2 = db.Products.Where(a => a.CategoryId == 2).Take(3).ToList();
-            var listProduct3 = db.Products.Where(a => a.CategoryId == 3).Take(3).ToList();
+            List<Category> listCategory;
+            List<Product> listProduct2;
+            List<Product> listProduct3;
 
+
+
+
+
+            
+            ICacheProvider cache = new DefaultCacheProvider();
+            if (cache.isSet(Consts.listCategoryCacheKey))
+            {
+                listCategory = cache.Get(Consts.listCategoryCacheKey) as List<Category>;
+            }
+            else
+            {
+                listCategory = db.Categories.ToList();
+                cache.Set(Consts.listCategoryCacheKey, listCategory, 60);
+            }
+            if (cache.isSet(Consts.listProduct2CacheKey))
+            {
+                listProduct2 = cache.Get(Consts.listProduct2CacheKey) as List<Product>;
+            }
+            else
+            {
+                listProduct2 = db.Products.Where(a => a.CategoryId == 2).Take(3).ToList();
+                cache.Set(Consts.listProduct2CacheKey, listProduct2, 60);
+            }
+            if (cache.isSet(Consts.listProduct3CacheKey))
+            {
+                listProduct3 = cache.Get(Consts.listProduct3CacheKey) as List<Product>;
+            }
+            else
+            {
+                listProduct3 = db.Products.Where(a => a.CategoryId == 3).Take(3).ToList();
+                cache.Set(Consts.listProduct3CacheKey, listProduct3, 60);
+            }
+             
             var vhm = new HomeViewModel()
             {
                 Categories = listCategory,

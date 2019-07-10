@@ -27,6 +27,7 @@ namespace BlogShopMVC.Controllers
             return View(product);
         }
         [ChildActionOnly]
+        [OutputCache(Duration = 60000)]
         public ActionResult CategoriesMenu()
         {
             var categories = db.Categories.ToList();

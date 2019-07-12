@@ -10,7 +10,7 @@
         @foreach (var category in Model.Categories)
         {
             <li>
-    
+
                 <a href="@Url.Action("List", "Categories", new { categoryName = category.CategoryName})">
                     @category.CategoryName
                 </a>
@@ -22,9 +22,9 @@
 
 </nav>
 
-  
+
 <br />
-    
+
 <section>
     <ul class="KursyTrzyKolumny duzaListaKursy">
         @foreach (var category1 in Model.Products2)
@@ -34,9 +34,9 @@
                     <a class="addToCartLink" href="@Url.Action("AddToCart", "Cart", new { id = category1.ProductId})">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
-                    
+
                     <a class="productLink" href="@Url.Action("Details", "Categories", new {id = category1.ProductId})">
-                        <img src="~/Content/PicturesProducts/@category1.IconProductFileName"  />
+                        <img src="~/Content/PicturesProducts/@category1.IconProductFileName" />
                         <h1>
                             @category1.ProductMake , @category1.ProductModel, @category1.ProductPrice
                         </h1>
@@ -59,8 +59,8 @@
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
+@section Scripts
+{
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryANDjqueryUI")
+}
 

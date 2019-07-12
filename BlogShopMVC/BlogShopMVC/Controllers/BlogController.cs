@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BlogShopMVC.DAL;
+using BlogShopMVC.Infrastructure;
 using BlogShopMVC.ViewModels;
+using SklepBlog.Models;
 
 namespace BlogShopMVC.Controllers
 {
@@ -14,7 +16,19 @@ namespace BlogShopMVC.Controllers
         // GET: Blog
         public ActionResult IndexBlog()
         {
-            var myArticles = db.Articles.ToList();
+            List<Article> myArticles;
+
+            ICacheProvider cache = new DefaultCacheProvider();
+
+            if (cache.isSet(Consts.ArticleCacheKey))
+            {
+                myArticles = cache.Get(Consts.ArticleCacheKey) as List<Article>;
+            }
+            else
+            {
+                myArticles = db.Articles.ToList();
+                cache.Set(Consts.ArticleCacheKey, myArticles, 60);
+            }
             var bvm = new BlogViewModel()
             {
              articles = myArticles

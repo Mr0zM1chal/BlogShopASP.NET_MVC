@@ -5,33 +5,43 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="ListaKategoriZawartosc">
-    
-    <div id="KategorieListPrawaSekcja">
-        @Html.Action("CategoriesMenu")
-        
-        <section id="SekcjaKurs">
-            <div id="KursLewa">
-                <img src="~/Content/PicturesProducts/@Model.IconProductFileName"/>
-            </div>
-            <div >
-                <div id="KursNazwa">
-                    <h1>
-                        @Model.ProductModel
-                    </h1>
-                    <h2>
-                        @Model.ProductMake
-                    </h2>
-                </div>
-                <div id="KursCena">
-                    <div>
-                        @Model.ProductPrice<span>PLN</span>
-                    </div>
-                    <a href="@Url.Action("AddToCart", "Cart", new {id = Model.ProductId})"></a>
-                </div>
 
+
+            <div id="ListaKategoriZawartosc">
+
+                <div id="KategorieListPrawaSekcja">
+                    @Html.Action("CategoriesMenu")
+                    <div id="KategorieListPrawaSekcja">
+                        <div id="Breadcrumb">
+                            <img src="../Content/Images/dommaly.png" />
+                            <a href="link">
+                                @Html.MvcSiteMap().SiteMapPath()
+                            </a>
+                        </div>
+                    </div>
+
+                    <section id="SekcjaKurs">
+                        <div id="KursLewa">
+                            <img src="~/Content/PicturesProducts/@Model.IconProductFileName" />
+                        </div>
+                        <div>
+                            <div id="KursNazwa">
+                                <h1>
+                                    @Model.ProductModel
+                                </h1>
+                                <h2>
+                                    @Model.ProductMake
+                                </h2>
+                            </div>
+                            <div id="KursCena">
+                                <div>
+                                    @Model.ProductPrice<span>PLN</span>
+                                </div>
+                                <a href="@Url.Action("AddToCart", "Cart", new {id = Model.ProductId})"></a>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
-    </div>
-</div>
 

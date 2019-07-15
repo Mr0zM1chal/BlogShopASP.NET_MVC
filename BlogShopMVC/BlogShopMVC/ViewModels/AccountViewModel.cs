@@ -6,9 +6,9 @@ using System.Web;
 
 namespace BlogShopMVC.ViewModels
 {
-    public class AccountViewModel
+    public class LoginViewModel
     {
-        [Required(ErrorMessage = "Musisz wprowadzić email")]
+        [Required(ErrorMessage = "Musisz wprowadzić e-mail")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -21,6 +21,7 @@ namespace BlogShopMVC.ViewModels
         public bool RememberMe { get; set; }
     }
 
+
     public class RegisterViewModel
     {
         [Required]
@@ -28,16 +29,14 @@ namespace BlogShopMVC.ViewModels
         public string Email { get; set; }
 
         [Required]
-        [StringLength(30, ErrorMessage = "{0} Musi mieć co najmniej {2} znaków", MinimumLength = 6)]
+        [StringLength(30, ErrorMessage = "{0} musi mieć co najmniej {2} znaków.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Hasło")]
+        [Display(Name = " Hasło ")]
         public string Password { get; set; }
 
-        [Required]
-        [StringLength(30, ErrorMessage = "{0} Musi mieć co najmniej {2} znaków", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Potwierdzenie i haslo nie pasują do siebie")]
+        [Display(Name = "Potwierdz Hasło ")]
+        [Compare("Password", ErrorMessage = "Hasło i potwierdzenie hasła nie pasują do siebie.")]
         public string ConfirmPassword { get; set; }
-
     }
 }

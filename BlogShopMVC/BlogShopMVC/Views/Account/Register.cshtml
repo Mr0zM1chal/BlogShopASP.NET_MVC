@@ -8,7 +8,12 @@
     Rejestracja
 }
 
-
+<div id="Breadcrumb">
+    <img src="../Content/Images/dommaly.png" />
+    <a href="link">
+        @Html.MvcSiteMap().SiteMapPath()
+    </a>
+</div>
 <div>
     @using (@Html.BeginForm("Register", "Account"))
     {
@@ -63,7 +68,7 @@
 
 @section Scripts
 {
-    <script src="~/Scripts/jquery-2.2.1.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 }

@@ -4,31 +4,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="ListaKategoriZawartosc">
-    @Html.Action("CategoriesMenu")
-    <div id="KategorieListPrawaSekcja">
-        <div id="Breadcrumb">
-            <img src="../Content/Images/dommaly.png" />
-            <a href="link">
-                @Html.MvcSiteMap().SiteMapPath()
-            </a>
+    <div id="ListaKategoriZawartosc">
+        @Html.Action("CategoriesMenu")
+        <div id="KategorieListPrawaSekcja">
+            <div id="Breadcrumb">
+                <img src="../Content/Images/dommaly.png" />
+                <a href="link">
+                    @Html.MvcSiteMap().SiteMapPath()
+                </a>
 
-            <form id="search-form" method="get" data-ajax="true" data-ajax-target="#SekcjaListaKategori">
-                <input id="search-filter" type="search" name="searchQuery"
-                       data-autocomplete-source="@Url.Action("ProductsHinits")"
-                       placeholder="Wprowadź tekst, aby wyfiltrować..." />
-                <input type="submit" value="" />
-            </form>
+                <form id="search-form" method="get" data-ajax="true" data-ajax-target="#SekcjaListaKategori">
+                    <input id="search-filter" type="search" name="searchQuery"
+                           data-autocomplete-source="@Url.Action("ProductsHinits")"
+                           placeholder="Wprowadź tekst, aby wyfiltrować..." />
+                    <input type="submit" value="" />
+                </form>
 
-            </>
+            </div>
         </div>
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div id="SekcjaListaKategori">
             @Html.Partial("_ProductsList")
         </div>
     </div>
-</div>
+
     @section Scripts
 {
         @System.Web.Optimization.Scripts.Render("~/bundles/jqueryANDjqueryUI")

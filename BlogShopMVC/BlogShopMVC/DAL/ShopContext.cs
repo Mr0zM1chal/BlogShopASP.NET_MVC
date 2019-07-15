@@ -6,10 +6,11 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
+using BlogShopMVC.Models;
 
 namespace BlogShopMVC.DAL
 {
-    public class ShopContext : IdentityDbContext
+    public class ShopContext : IdentityDbContext<ApplicationUser>
     {
         public ShopContext() : base("ShopContext")
         {

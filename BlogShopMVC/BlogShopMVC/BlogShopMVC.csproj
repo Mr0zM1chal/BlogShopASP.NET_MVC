@@ -216,6 +216,14 @@
     <Compile Include="Migrations\201906141443349_dodanie identity.Designer.cs">
       <DependentUpon>201906141443349_dodanie identity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907151448301_DataUserAdded.cs" />
+    <Compile Include="Migrations\201907151448301_DataUserAdded.Designer.cs">
+      <DependentUpon>201907151448301_DataUserAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907151745076_DataUserAdded2.cs" />
+    <Compile Include="Migrations\201907151745076_DataUserAdded2.Designer.cs">
+      <DependentUpon>201907151745076_DataUserAdded2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Category.cs" />
@@ -442,6 +450,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906141443349_dodanie identity.resx">
       <DependentUpon>201906141443349_dodanie identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907151448301_DataUserAdded.resx">
+      <DependentUpon>201907151448301_DataUserAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907151745076_DataUserAdded2.resx">
+      <DependentUpon>201907151745076_DataUserAdded2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

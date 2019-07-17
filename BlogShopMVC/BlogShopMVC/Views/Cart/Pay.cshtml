@@ -1,0 +1,71 @@
+﻿@model SklepBlog.Models.Order
+@{
+    ViewBag.Title = "Pay";
+    Layout = "~/Views/Shared/_RightSectionLayout.cshtml";
+}
+
+<h2>Pay</h2>
+
+@section SectionTitle{
+    Uzupełnij dane zmówienia
+}
+
+@using (Html.BeginForm("Pay", "Cart"))
+{
+<table id="checkout-address-table">
+    <tr>
+        <td>@Html.LabelFor(o => o.FirstName, "Imię:")</td>
+        <td>@Html.TextBoxFor(o => o.FirstName)</td>
+        <td>@Html.ValidationMessageFor(o => o.FirstName)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.LastName, "Nazwisko:")</td>
+        <td>@Html.TextBoxFor(o => o.LastName)</td>
+        <td>@Html.ValidationMessageFor(o => o.LastName)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.Adress, "Adres:")</td>
+        <td>@Html.TextBoxFor(o => o.Adress)</td>
+        <td>@Html.ValidationMessageFor(o => o.Adress)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.City, "Miasto:")</td>
+        <td>@Html.TextBoxFor(o => o.City)</td>
+        <td>@Html.ValidationMessageFor(o => o.City)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.Postcode, "Postcode:")</td>
+        <td>@Html.TextBoxFor(o => o.Postcode)</td>
+        <td>@Html.ValidationMessageFor(o => o.Postcode)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.Mobile, "Telefon:")</td>
+        <td>@Html.TextBoxFor(o => o.Mobile)</td>
+        <td>@Html.ValidationMessageFor(o => o.Mobile)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(o => o.Email, "E-mail:")</td>
+        <td>@Html.TextBoxFor(o => o.Email)</td>
+        <td>@Html.ValidationMessageFor(o => o.Email)</td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Comment">Uwagi</label>
+        </td>
+        <td>
+            <textarea cols="40" rows="3" name="Komentarz">@Model.Comment</textarea>
+        </td>
+    </tr>
+
+</table>
+
+    @Html.ValidationSummary()
+
+    <hr style="margin-bottom: 50px;" />
+
+    <div class="SekcjaPrzyciski">
+        <a class="PrzyciskLink" href="">Wróć</a>
+    </div>
+    <input type="submit" class="PrzyciskLink" style="" value="Potwierdź" />
+
+}

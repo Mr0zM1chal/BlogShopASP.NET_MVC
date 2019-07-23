@@ -8,8 +8,11 @@
       <mvcSiteMapNode title="Product" controller="Categories" action="Details" dynamicNodeProvider="BlogShopMVC.Infrastructure.ShopContentDynamicNodeProvider, BlogShopMVC" />
     </mvcSiteMapNode>
     <mvcSiteMapNode title="Koszyk" controller="Cart" action="Index">
-      <mvcSiteMapNode title="Dane zamowienia" controller="Koszyk" action="Zaplac"/>
-      <mvcSiteMapNode title="Potwierdzenie zamowienia" controller="Koszyk" action="PotwierdzZamowienie"/>
+      <mvcSiteMapNode title="Dane zamowienia" controller="Cart" action="Pay"/>
+      <mvcSiteMapNode title="Potwierdzenie zamowienia" controller="Cart" action="OrderCorfirm"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Blog" controller="Blog" action="Index">
+      <mvcSiteMapNode title="Article" controller="Blog" action="ArticleDetails" dynamicNodeProvider="BlogShopMVC.Infrastructure.BlogDynamicNodeProvider, BlogShopMVC" />
     </mvcSiteMapNode>
     <mvcSiteMapNode title="Konto" controller="Manage" action="Index">
       <mvcSiteMapNode title="Rejestracja" controller="Account" action="Register" />

@@ -13,6 +13,7 @@ namespace BlogShopMVC.Models
         public string Adress { get; set; }
         public string City { get; set; }
 
+        public string PostCode { get; set; }
         [RegularExpression(@"(\+\d{2})*[\d\s-]+", ErrorMessage = "Błędny format numeru telefonu.")]
         public string Mobile { get; set; }
         [EmailAddress(ErrorMessage = "Błędny format adresu e-mail.")]

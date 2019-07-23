@@ -236,6 +236,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\ShopInitializer.cs" />
     <Compile Include="DAL\ShopContext.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
@@ -243,6 +244,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\AppConfig.cs" />
+    <Compile Include="Infrastructure\BlogDynamicNodeProvider.cs" />
     <Compile Include="Infrastructure\CartManager.cs" />
     <Compile Include="Infrastructure\CategoriesDynamicNodeProvider.cs" />
     <Compile Include="Infrastructure\Consts.cs" />
@@ -280,6 +282,10 @@
     <Compile Include="Migrations\201907171853184_Orders.Designer.cs">
       <DependentUpon>201907171853184_Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907231936494_DataUser .cs" />
+    <Compile Include="Migrations\201907231936494_DataUser .Designer.cs">
+      <DependentUpon>201907231936494_DataUser .cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Category.cs" />
@@ -297,6 +303,7 @@
     <Compile Include="ViewModels\CartDeletingViewModel.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ManageCredentialsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -474,6 +481,8 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Shared\_ManageLayout.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -483,7 +492,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Koszyk\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -517,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907171853184_Orders.resx">
       <DependentUpon>201907171853184_Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907231936494_DataUser .resx">
+      <DependentUpon>201907231936494_DataUser .cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

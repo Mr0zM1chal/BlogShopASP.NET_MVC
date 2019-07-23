@@ -48,23 +48,23 @@ namespace BlogShopMVC.DAL
             {
                 new Article()
                 {
-                    ArticleId = 1, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
-                    ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                    ArticleId = 1, ArticleContent = "Azdsadcdsaddsfaasd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                    ArticleTitle = "fdsfsf1sfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
                 },
                 new Article()
                 {
-                ArticleId = 2, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
-                ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                ArticleId = 2, ArticleContent = "Azdsadcdsadfasfa dsfadassadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                ArticleTitle = "fdsfsfsf2ds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
                 },
                 new Article()
                 {
-                ArticleId = 3, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
-                ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                ArticleId = 3, ArticleContent = "Azdsadc432asfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                ArticleTitle = "fdsfsfs3fds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
                 },
                 new Article()
                 {
-                    ArticleId = 4, ArticleContent = "Azdsadcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
-                    ArticleTitle = "fdsfsfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
+                    ArticleId = 4, ArticleContent = "Azdsamjmjdcdsadfasfa dsfad asd sadf", ArticleImportant = false, ArticleShortcut = "desfbhfjsbfvjsbfjsbfjsbdfjsbdfcjsbdfjsbfujs nfkaessbnfksafbnekesaf" + "dfskjnsfdkjndsknf dsa as",
+                    ArticleTitle = "fdsf4sfsfds dsfdsfdfs!!!!!", NameOfImageArticle = "xyz2.png"
                 },
 
             };
